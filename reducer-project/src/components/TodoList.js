@@ -10,6 +10,29 @@ const TodoList = props => {
         setTask(e.target.value)
     }
 
+    // const completeTask = e => {
+    //     state.forEach(e => {
+    //         if (e.completed === true) {
+
+    //         }
+    //     })
+    // }
+
+    // const toggleComplete = clickedId => {
+    //     const newTaskList = state.map(e => {
+    //         if (e.id === clickedId) {
+    //             return {
+    //                 ...e, completed: !e.completed
+    //             }
+    //         } else {
+    //             return e;
+    //         }
+    //     })
+    //     return newTaskList;
+    // }
+
+    console.log(task)
+
     return (
         <div>
             <h1>To Do List!</h1>
@@ -19,6 +42,9 @@ const TodoList = props => {
                         <div className='task-card'>
                         <h4>Task:<br/> {e.item}</h4>
                         <h5>Status: {e.completed === true ? 'Completed!' : 'In progress...'}</h5>
+                        <button onClick={item => {
+                            dispatch({ type: 'MARK_COMPLETE', payload: !e.completed })
+                        }}>Mark as complete</button>
                         </div>
                     )
                 })}
