@@ -39,7 +39,7 @@ const TodoList = props => {
                     }}>Add</button><br/>
                     <button onClick={e => {
                         e.preventDefault();
-                        dispatch({ type: 'REMOVE_COMPLETE' })
+                        dispatch({ type: 'CLEAR_COMPLETE' })
                     }}>Clear Completed</button>
                 </form>
             </div>
