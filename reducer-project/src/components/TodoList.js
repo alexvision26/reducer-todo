@@ -21,7 +21,8 @@ const TodoList = props => {
                         <div className='task-card'>
                         <h4>Task:<br/> {e.item}</h4>
                         <h5>Status: {e.completed === true ? 'Completed!' : 'In progress...'}</h5>
-                        <button id={e.id} onClick={event => { dispatch({ type: 'MARK_COMPLETE', payload: e.id })}}>Mark as complete</button>
+                        <button id={e.id} onClick={event => {
+                            dispatch({ type: 'MARK_COMPLETE', payload: e.id })}}>Mark as complete</button>
                         </div>
                     )
                 })}

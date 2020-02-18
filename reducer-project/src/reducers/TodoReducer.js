@@ -19,14 +19,13 @@ export const todoReducer = (state, action) => {
         case 'ADD_TODO':
             return [...state, { item: action.payload, id:Date.now(), completed: false }]
         case 'MARK_COMPLETE':
-            return state.map(item => {
-                if(item.id === action.payload) {
-                    return !item.completed;
-                } else {
-                    return item.completed;
+            state.map(item => {
+                if (item.id === action.payload){
+                return item.completed = !item.completed;
                 }
             })
-            
+            console.log(state)
+            return [...state]
             // state.map(task => {
             //     if (task.id === action.id) {
             //         return state;
