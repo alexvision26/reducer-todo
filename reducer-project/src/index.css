@@ -16,6 +16,11 @@ code {
 
 html {
   text-align: center;
+  background-image: url('https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2110&q=80');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .task-list {
@@ -31,6 +36,13 @@ html {
   height: 150px;
   margin: 2%;
   padding: 2%;
-  border: 2px solid grey;
+  border: .5px solid rgb(202, 202, 108);
   width: 20%;
+  background-color: #FFFF88;
+  box-shadow: 5px 4px 7px 1px rgba(128, 128, 128, 0.425);
+}
+
+.task-card.completed {
+  /* text-decoration: line-through; */
+  background-color: rgb(81, 218, 68);
 }

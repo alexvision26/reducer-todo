@@ -18,7 +18,7 @@ const TodoList = props => {
             <div className='task-list'>
                 {state.map(e => {
                     return (
-                        <div className='task-card'>
+                        <div className={`task-card${e.completed ? ' completed' : ''}`}>
                         <h4>Task:<br/> {e.item}</h4>
                         <h5>Status: {e.completed === true ? 'Completed!' : 'In progress...'}</h5>
                         <button id={e.id} onClick={event => {
